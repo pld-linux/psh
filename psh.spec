@@ -32,12 +32,12 @@ mo¿e aspirowaæ do bycia podstawow± pow³ok± pracy.
 
 %build
 perl Makefile.PL
-make RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_libdir}/perl5/5.00503/i686-pld-linux-thread
-make install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man{3,1}/* \
 	CHANGES.pod README* TODO psh.NEWS HACKING RELEASE
