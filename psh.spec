@@ -4,19 +4,18 @@ Summary(pl):	Perl Shell
 Name:		psh
 Version:	0.008
 Release:	3
-Copyright:	Artistic License
+License:	Artistic License
 Group:		Applications/Shells
 Group(de):	Applikationen/Shells
 Group(pl):	Aplikacje/Pow³oki
-Source0:	%{name}-%{version}.tar.gz
-URL:		http://www.focusresearch.com/gregor/psh/index.html
-#URL:		http://sourceforge.net/project/?group_id=475
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/psh/%{name}-%{version}.tar.gz
+URL:		http://sourceforge.net/projects/psh/
 BuildRequires:	perl >= 5.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The Perl Shell (psh) combines aspects of bash and other shells with
-the power of Perl scripting. As author says: " It aspirate to be Your
+the power of Perl scripting. As author says: "It aspirate to be Your
 primary login shell"
 
 %description -l pl
