@@ -6,7 +6,7 @@ Version:	0.010pre1
 Release:	3
 License:	Artistic
 Group:		Applications/Shells
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/psh/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/psh/%{name}-%{version}.tar.gz
 URL:		http://sourceforge.net/projects/psh/
 BuildRequires:	perl >= 5.6.0
 BuildRequires:	rpm-perlprov >= 4.0.2-24
