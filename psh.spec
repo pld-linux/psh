@@ -3,11 +3,11 @@ Summary:	Perl Shell
 Summary(pl):	Perl Shell
 Name:		psh
 Version:	0.008
-Release:	1
+Release:	2
 Copyright:	Artistic License
 Group:		Shells
 Group(pl):	Pow³oki
-Source0:	%name-%version.tar.gz
+Source0:	%{name}-%{version}.tar.gz
 URL:		http://www.focusresearch.com/gregor/psh/index.html
 #URL:		http://sourceforge.net/project/?group_id=475
 BuildRequires:	perl >= 5.6.0
@@ -43,7 +43,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {CHANGES.pod,README,README.perl5.004,TODO,HACKING,RELEASE}.gz
 %attr(755,root,root) %{_bindir}/psh
-%{perl_sitearch}/*
 %{perl_sitelib}/Psh.pm
 %{perl_sitelib}/Psh
 %{_mandir}/man1/*
