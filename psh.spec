@@ -40,7 +40,7 @@ install -d $RPM_BUILD_ROOT%{_libdir}/perl5/5.00503/i686-pld-linux-thread
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man{3,1}/* \
-	CHANGES.pod README* TODO psh.NEWS HACKING RELEASE
+	CHANGES.pod README* TODO HACKING RELEASE
 
 %clean
 rm -rf $RPM_BUILD_ROOT
