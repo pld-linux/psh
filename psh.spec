@@ -8,8 +8,8 @@ Copyright:	Artistic License
 Group:		Shells
 Group(pl):	Pow³oki
 Source0:	%name-%version.tar.gz
-URL0:		http://www.focusresearch.com/gregor/psh/index.html
-URL1:		http://sourceforge.net/project/?group_id=475
+URL:		http://www.focusresearch.com/gregor/psh/index.html
+#URL:		http://sourceforge.net/project/?group_id=475
 BuildRequires:	perl >= 5.005
 %requires_eq	perl = 5.005_03
 Requires:	%{perl_sitearch}
