@@ -3,15 +3,17 @@ Summary:	Perl Shell
 Summary(pl):	Pow³oka Perla
 Name:		psh
 Version:	1.0
-Release:	2
+Release:	3
 License:	Artistic
 Group:		Applications/Shells
 Source0:	http://dl.sourceforge.net/psh/%{name}-%{version}.tar.gz
 # Source0-md5:	73ada6747732c9abdfec2d6ad5c477c6
+Patch0:		%{name}-dirty_Makefile.patch
 URL:		http://sourceforge.net/projects/psh/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	perl(Psh::StrategyBunch)
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_noautoreq	'perl(import)'
@@ -28,6 +30,7 @@ bycia podstawow± pow³ok± pracy.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %{__perl} Makefile.PL \
@@ -45,7 +48,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.pod COPYRIGHT README* TODO HACKING RELEASE
+%doc CHANGES.pod COPYRIGHT INSTALL README* TODO HACKING RELEASE postinstall.pl
 %attr(755,root,root) %{_bindir}/psh
 %{perl_vendorlib}/Psh.pm
 %{perl_vendorlib}/Psh
