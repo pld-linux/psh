@@ -13,7 +13,7 @@ URL1:		http://sourceforge.net/project/?group_id=475
 BuildRequires:	perl >= 5.005
 %requires_eq	perl = 5.005_03
 Requires:	%{perl_sitearch}
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define	_prefix	/usr
 
