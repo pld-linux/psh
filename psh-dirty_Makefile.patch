@@ -1,0 +1,13 @@
+--- Makefile.PL~	2003-01-03 05:17:32.000000000 +0100
++++ Makefile.PL	2004-11-20 22:31:09.000000000 +0100
+@@ -21,8 +21,8 @@
+ 	# to copy share files after installation
+ 	my $tmp="
+ 
+-install ::
+-	\$(PERL) postinstall.pl \$(SITEPREFIX) \$(PREFIX)
++#install ::
++#	\$(PERL) postinstall.pl \$(SITEPREFIX) \$(PREFIX)
+ 
+ 
+ lib/Psh/StrategyBunch.pm : $sb_depends
