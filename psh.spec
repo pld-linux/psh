@@ -11,10 +11,10 @@ Source0:	http://dl.sourceforge.net/psh/%{name}-%{version}.tar.gz
 URL:		http://sourceforge.net/projects/psh/
 BuildRequires:	perl-devel >= 5.6.0
 BuildRequires:	rpm-perlprov >= 4.0.2-24
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides:	perl(Psh::StrategyBunch)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_noautoreq	"perl(import)"
+%define		_noautoreq	'perl(import)'
 
 %description
 The Perl Shell (psh) combines aspects of bash and other shells with
@@ -36,6 +36,7 @@ bycia podstawow± pow³ok± pracy.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
