@@ -1,9 +1,9 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Perl Shell
-Summary(pl):	Perl Shell
+Summary(pl):	Pow³oka Perla
 Name:		psh
 Version:	0.010pre1
-Release:	2
+Release:	3
 License:	Artistic
 Group:		Applications/Shells
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/psh/%{name}-%{version}.tar.gz
@@ -11,6 +11,7 @@ URL:		http://sourceforge.net/projects/psh/
 BuildRequires:	perl >= 5.6.0
 BuildRequires:	rpm-perlprov >= 4.0.2-24
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Provides:	perl(Psh::StrategyBunch)
 
 %define		_noautoreq	"perl(import)"
 
@@ -20,9 +21,9 @@ the power of Perl scripting. As author says: "It aspirate to be Your
 primary login shell"
 
 %description -l pl
-Perl shell (psh) jest pow³ok± która ³±czy w sobie mo¿liwo¶ci Bash'a i
-innych pow³ok z mo¿liwo¶ciami Perla. Autor twierdzi, ¿e pow³oka ta
-mo¿e aspirowaæ do bycia podstawow± pow³ok± pracy.
+Pow³oka Perla (psh) ³±czy w sobie mo¿liwo¶ci basha i innych pow³ok z
+mo¿liwo¶ciami Perla. Autor twierdzi, ¿e pow³oka ta mo¿e aspirowaæ do
+bycia podstawow± pow³ok± pracy.
 
 %prep
 %setup -q
