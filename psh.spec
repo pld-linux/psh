@@ -5,8 +5,9 @@ Name:		psh
 Version:	0.008
 Release:	3
 Copyright:	Artistic License
-Group:		Shells
-Group(pl):	Pow³oki
+Group:		Applications/Shells
+Group(de):	Applikationen/Shells
+Group(pl):	Aplikacje/Pow³oki
 Source0:	%{name}-%{version}.tar.gz
 URL:		http://www.focusresearch.com/gregor/psh/index.html
 #URL:		http://sourceforge.net/project/?group_id=475
@@ -28,7 +29,7 @@ mo¿e aspirowaæ do bycia podstawow± pow³ok± pracy.
 
 %build
 perl Makefile.PL
-%{__make} RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
