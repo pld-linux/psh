@@ -7,6 +7,7 @@ Release:	4
 License:	Artistic
 Group:		Applications/Shells
 Source0:	http://dl.sourceforge.net/psh/%{name}-%{version}.tar.gz
+# Source0-md5:	41262a3d360466e7ee0d1d3a39ded562
 URL:		http://sourceforge.net/projects/psh/
 BuildRequires:	perl-devel >= 5.6.0
 BuildRequires:	rpm-perlprov >= 4.0.2-24
