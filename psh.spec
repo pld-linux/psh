@@ -3,7 +3,7 @@ Summary:	Perl Shell
 Summary(pl):	Perl Shell
 Name:		psh
 Version:	0.008
-Release:	2
+Release:	3
 Copyright:	Artistic License
 Group:		Shells
 Group(pl):	Pow³oki
