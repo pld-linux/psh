@@ -18,14 +18,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define	_prefix	/usr
 
 %description
-The Perl Shell (psh) combines aspects of bash and other shells with the power
-of Perl scripting.
-As author says: " It aspirate to be Your primary login shell"
+The Perl Shell (psh) combines aspects of bash and other shells with
+the power of Perl scripting. As author says: " It aspirate to be Your
+primary login shell"
 
 %description -l pl
-Perl shell (psh) jest pow³ok± która ³±czy w sobie mo¿liwo¶ci Bash'a i innych
-pow³ok z mo¿liwo¶ciami Perla.
-Autor twierdzi, ¿e pow³oka ta mo¿e aspirowaæ do bycia podstawow± pow³ok± pracy.
+Perl shell (psh) jest pow³ok± która ³±czy w sobie mo¿liwo¶ci Bash'a i
+innych pow³ok z mo¿liwo¶ciami Perla. Autor twierdzi, ¿e pow³oka ta
+mo¿e aspirowaæ do bycia podstawow± pow³ok± pracy.
 
 %prep
 %setup -q
