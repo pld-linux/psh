@@ -8,7 +8,7 @@ License:	Artistic
 Group:		Applications/Shells
 Source0:	http://dl.sourceforge.net/psh/%{name}-%{version}.tar.gz
 URL:		http://sourceforge.net/projects/psh/
-BuildRequires:	perl >= 5.6.0
+BuildRequires:	perl-devel >= 5.6.0
 BuildRequires:	rpm-perlprov >= 4.0.2-24
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Provides:	perl(Psh::StrategyBunch)
