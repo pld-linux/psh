@@ -6,8 +6,6 @@ Version:	0.009
 Release:	1
 License:	Artistic License
 Group:		Applications/Shells
-Group(de):	Applikationen/Shells
-Group(pl):	Aplikacje/Pow³oki
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/psh/%{name}-%{version}.tar.gz
 URL:		http://sourceforge.net/projects/psh/
 BuildRequires:	perl >= 5.6.0
