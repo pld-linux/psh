@@ -3,8 +3,8 @@ Summary:	Perl Shell
 Summary(pl):	Perl Shell
 Name:		psh
 Version:	0.010pre1
-Release:	1
-License:	Artistic License
+Release:	2
+License:	Artistic
 Group:		Applications/Shells
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/psh/%{name}-%{version}.tar.gz
 URL:		http://sourceforge.net/projects/psh/
@@ -35,14 +35,12 @@ perl Makefile.PL
 rm -rf $RPM_BUILD_ROOT
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf CHANGES.pod COPYRIGHT README* TODO HACKING RELEASE
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc CHANGES.pod COPYRIGHT README* TODO HACKING RELEASE
 %attr(755,root,root) %{_bindir}/psh
 %{perl_sitelib}/Psh.pm
 %{perl_sitelib}/Psh
