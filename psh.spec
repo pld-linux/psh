@@ -2,8 +2,8 @@
 Summary:	Perl Shell
 Summary(pl):	Perl Shell
 Name:		psh
-Version:	0.008
-Release:	3
+Version:	0.009
+Release:	1
 License:	Artistic License
 Group:		Applications/Shells
 Group(de):	Applikationen/Shells
@@ -11,7 +11,10 @@ Group(pl):	Aplikacje/Pow³oki
 Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/psh/%{name}-%{version}.tar.gz
 URL:		http://sourceforge.net/projects/psh/
 BuildRequires:	perl >= 5.6.0
+BuildRequires:	rpm-perlprov >= 4.0.2-24
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		_noautoreq	"perl(import)"
 
 %description
 The Perl Shell (psh) combines aspects of bash and other shells with
@@ -28,20 +31,20 @@ mo¿e aspirowaæ do bycia podstawow± pow³ok± pracy.
 
 %build
 perl Makefile.PL
-%{__make} RPM_OPT_FLAGS="%{rpmcflags}"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf CHANGES.pod README* TODO HACKING RELEASE
+gzip -9nf CHANGES.pod COPYRIGHT README* TODO HACKING RELEASE
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {CHANGES.pod,README,README.perl5.004,TODO,HACKING,RELEASE}.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/psh
 %{perl_sitelib}/Psh.pm
 %{perl_sitelib}/Psh
