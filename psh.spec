@@ -10,12 +10,10 @@ Group(pl):	Pow³oki
 Source0:	%name-%version.tar.gz
 URL:		http://www.focusresearch.com/gregor/psh/index.html
 #URL:		http://sourceforge.net/project/?group_id=475
-BuildRequires:	perl >= 5.005
-%requires_eq	perl = 5.005_03
+BuildRequires:	perl >= 5.6.0
+%requires_eq	perl
 Requires:	%{perl_sitearch}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define	_prefix	/usr
 
 %description
 The Perl Shell (psh) combines aspects of bash and other shells with
@@ -36,11 +34,9 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/perl5/5.00503/i686-pld-linux-thread
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man{3,1}/* \
-	CHANGES.pod README* TODO HACKING RELEASE
+gzip -9nf CHANGES.pod README* TODO HACKING RELEASE
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -49,10 +45,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {CHANGES.pod,README,README.perl5.004,TODO,HACKING,RELEASE}.gz
 %attr(755,root,root) %{_bindir}/psh
-
-%{_libdir}/perl5/5.00503/*
-%{perl_sitelib}/*
-#%{perl_sitearch}/*
-
+%{perl_sitearch}/*
+%{perl_sitelib}/Psh.pm
+%{perl_sitelib}/Psh
 %{_mandir}/man1/*
 %{_mandir}/man3/*
