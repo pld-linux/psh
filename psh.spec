@@ -3,14 +3,14 @@ Summary:	Perl Shell
 Summary(pl):	Pow³oka Perla
 Name:		psh
 Version:	1.0
-Release:	1
+Release:	2
 License:	Artistic
 Group:		Applications/Shells
 Source0:	http://dl.sourceforge.net/psh/%{name}-%{version}.tar.gz
 # Source0-md5:	73ada6747732c9abdfec2d6ad5c477c6
 URL:		http://sourceforge.net/projects/psh/
-BuildRequires:	perl-devel >= 5.6.0
-BuildRequires:	rpm-perlprov >= 4.0.2-24
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 Provides:	perl(Psh::StrategyBunch)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
