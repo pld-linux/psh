@@ -3,7 +3,7 @@ Summary:	Perl Shell
 Summary(pl):	Pow³oka Perla
 Name:		psh
 Version:	0.010pre1
-Release:	3
+Release:	4
 License:	Artistic
 Group:		Applications/Shells
 Source0:	http://dl.sourceforge.net/psh/%{name}-%{version}.tar.gz
@@ -29,12 +29,14 @@ bycia podstawow± pow³ok± pracy.
 %setup -q
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -43,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES.pod COPYRIGHT README* TODO HACKING RELEASE
 %attr(755,root,root) %{_bindir}/psh
-%{perl_sitelib}/Psh.pm
-%{perl_sitelib}/Psh
+%{perl_vendorlib}/Psh.pm
+%{perl_vendorlib}/Psh
 %{_mandir}/man1/*
 %{_mandir}/man3/*
