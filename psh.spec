@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Perl Shell
-Summary(pl):	Pow≥oka Perla
+Summary(pl.UTF-8):   Pow≈Çoka Perla
 Name:		psh
 Version:	1.0
 Release:	3
@@ -23,10 +23,10 @@ The Perl Shell (psh) combines aspects of bash and other shells with
 the power of Perl scripting. As author says: "It aspirate to be Your
 primary login shell"
 
-%description -l pl
-Pow≥oka Perla (psh) ≥±czy w sobie moøliwo∂ci basha i innych pow≥ok z
-moøliwo∂ciami Perla. Autor twierdzi, øe pow≥oka ta moøe aspirowaÊ do
-bycia podstawow± pow≥ok± pracy.
+%description -l pl.UTF-8
+Pow≈Çoka Perla (psh) ≈ÇƒÖczy w sobie mo≈ºliwo≈õci basha i innych pow≈Çok z
+mo≈ºliwo≈õciami Perla. Autor twierdzi, ≈ºe pow≈Çoka ta mo≈ºe aspirowaƒá do
+bycia podstawowƒÖ pow≈ÇokƒÖ pracy.
 
 %prep
 %setup -q
