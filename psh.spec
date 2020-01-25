@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 Summary:	Perl Shell
 Summary(pl.UTF-8):	Powłoka Perla
 Name:		psh
